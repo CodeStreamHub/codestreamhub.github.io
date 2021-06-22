@@ -3,44 +3,73 @@
   <span class="vmware-logo">
     <img src="https://vmware.github.io/images/vmware.svg" alt="Angular Logo" />
   </span>
-  <span class="cs-title">CodeStream Custom Integration</span>
+  <span class="cs-title">CodeStream Hub</span>
 </div>
 
 <div class="hero">
   <img src="https://vmware.github.io/images/vmw_oss.svg" alt="Angular" />
-  <h1 style="width: 72%; color: #fff;
+  <h1 style="width: 72%; 
   margin-left: auto;
   margin-right: auto; font-weight: 400;line-height: 48px;
-margin-top: 24px;">Building Custom Integration for Everyone</h1>
+margin-top: 24px;">Building Custom Integrations for Everyone</h1>
+  <h5>Collaborative space for VMware and Community to build and share verified custom integrations together with one
+    click installations and upgrades
+  </h5>
 </div>
 
 <div class="content" role="main">
-  <h2 style="font-size: 24px; margin-bottom: 25px;">Featured Custom Integration</h2>
+  <h2 class="cs-header">Featured Custom Integrations</h2>
   <div class="cs-row">
     <ng-container *ngFor="let int of integration">
       <div class="cs-column">
         <div class="cs-card clickable">
-          <!-- <a target="_blank" href="https://velero.io/" style="text-decoration: none;color: #000;"> -->
-            <div class="card-block">
-              <div>
-                <p>
-                  <img src="{{int.logo}}" alt="velero" style="width: 120px;text-align: center;" />
-                </p>
+          <a target="_blank" href="{{int.repo}}" style="text-decoration: none;color: #000;">
+            <div class="card-wrapper">
+              <div class="card-block">
+                <div style="text-align: center;">
+                  <p>
+                    <img src="{{int.logo}}" alt="velero" style="width: 120px;text-align: center;" />
+                  </p>
+                </div>
+                <div class="card-text">
+                  <h4 style="font-size: 25px; font-weight: 300; line-height: 24px; margin: 50px 0px 25px 0px;">
+                    {{int.name}}
+                  </h4>
+                  <p style="line-height: 24px;margin-top: 24px;margin-bottom: 0;">
+                    {{int.description}}
+                  </p>
+                </div>
               </div>
-              <div class="card-text">
-                <h4 style="font-size: 25px; font-weight: 300; line-height: 24px; margin: 25px 0px 25px 0px;">
-                  {{int.name}}
-                </h4>
-                <p style="line-height: 24px;margin-top: 24px;margin-bottom: 0;">
-                  {{int.description}}
-                </p>
+              <div class="card-footer">
+                <table>
+                  <tr>
+                    <td style="width: 200px;">Publisher</td>
+                    <td>Version</td>
+                  </tr>
+                  <tr style="font-weight: bold;">
+                    <td style="width: 202px;">{{int.publisher}}</td>
+                    <td>{{int.latestVersion}}</td>
+                  </tr>
+                </table>
               </div>
             </div>
-          <!-- </a> -->
+          </a>
         </div>
       </div>
     </ng-container>
   </div>
+</div>
+
+<!-- Terminal -->
+<h5>How to install</h5>
+<div class="terminal">
+  <pre>Download the CLI (https://github.com/CodeStreamHub/codestream-cli/tree/main/binaries) and add to PATH</pre>
+  <pre>Run 'cs login -t &lt;API token&gt;' command to login to your org/instance (This is a one-time step)</pre>
+  <pre>Run 'cs ci list' to know the available custom integrations and pick the id of required integration</pre>
+  <pre>Run 'cs ci install &lt;integration id&gt; -p &lt;project&gt;'</pre>
+  <pre>Selected integration is now installed to your org/instance and you can start using it.</pre>
+  <pre>And for upgrading the existing integrations, just use 'cs ci upgrade' command with appropriate values.</pre>
+  <pre>For any help related to CLI, use -h flag.</pre>
 </div>
 
 <router-outlet></router-outlet>
