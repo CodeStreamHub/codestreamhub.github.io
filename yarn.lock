@@ -195,6 +195,13 @@
   dependencies:
     tslib "^2.1.0"
 
+"@angular/flex-layout@^12.0.0-beta.34":
+  version "12.0.0-beta.34"
+  resolved "https://build-artifactory.eng.vmware.com/artifactory/api/npm/npm/@angular/flex-layout/-/flex-layout-12.0.0-beta.34.tgz#24d83bf3f8e4eacb661b3b8f9f85b0102415ff30"
+  integrity sha1-JNg78/jk6stmGzuPn4WwECQV/zA=
+  dependencies:
+    tslib "^2.1.0"
+
 "@angular/forms@~12.0.5":
   version "12.0.5"
   resolved "https://build-artifactory.eng.vmware.com/artifactory/api/npm/npm/@angular/forms/-/forms-12.0.5.tgz#17e888667d644b03f4d67928f47bbf227fc6b4ee"
@@ -1346,15 +1353,10 @@
   resolved "https://build-artifactory.eng.vmware.com/artifactory/api/npm/npm/@types/minimatch/-/minimatch-3.0.4.tgz#f0ec25dbf2f0e4b18647313ac031134ca5b24b21"
   integrity sha1-8Owl2/Lw5LGGRzE6wDETTKWySyE=
 
-"@types/node@*", "@types/node@>=10.0.0":
+"@types/node@*", "@types/node@>=10.0.0", "@types/node@^15.12.4":
   version "15.12.4"
   resolved "https://build-artifactory.eng.vmware.com/artifactory/api/npm/npm/@types/node/-/node-15.12.4.tgz#e1cf817d70a1e118e81922c4ff6683ce9d422e26"
   integrity sha1-4c+BfXCh4RjoGSLE/2aDzp1CLiY=
-
-"@types/node@^12.11.1":
-  version "12.20.15"
-  resolved "https://build-artifactory.eng.vmware.com/artifactory/api/npm/npm/@types/node/-/node-12.20.15.tgz#10ee6a6a3f971966fddfa3f6e89ef7a73ec622df"
-  integrity sha1-EO5qaj+XGWb936P26J73pz7GIt8=
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -1702,6 +1704,11 @@ are-we-there-yet@~1.1.2:
   dependencies:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
+
+argparse@^2.0.1:
+  version "2.0.1"
+  resolved "https://build-artifactory.eng.vmware.com/artifactory/api/npm/npm/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
+  integrity sha1-JG9Q88p4oyQPbJl+ipvR6sSeSzg=
 
 arr-diff@^4.0.0:
   version "4.0.0"
@@ -4293,6 +4300,13 @@ js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://build-artifactory.eng.vmware.com/artifactory/api/npm/npm/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha1-GSA/tZmR35jjoocFDUZHzerzJJk=
+
+js-yaml@^4.1.0:
+  version "4.1.0"
+  resolved "https://build-artifactory.eng.vmware.com/artifactory/api/npm/npm/js-yaml/-/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
+  integrity sha1-wftl+PUBeQHN0slRhkuhhFihBgI=
+  dependencies:
+    argparse "^2.0.1"
 
 jsbn@~0.1.0:
   version "0.1.1"

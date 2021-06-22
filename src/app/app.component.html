@@ -15,32 +15,28 @@ margin-top: 24px;">Building Custom Integration for Everyone</h1>
 </div>
 
 <div class="content" role="main">
-  <h2 style="font-size: 24px;     margin-bottom: 25px;">Featured Custom Integration</h2>
-
+  <h2 style="font-size: 24px; margin-bottom: 25px;">Featured Custom Integration</h2>
   <div class="cs-row">
-    <ng-container *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
+    <ng-container *ngFor="let int of integration">
       <div class="cs-column">
         <div class="cs-card clickable">
-          <a target="_blank" href="https://velero.io/" style="text-decoration: none;
-          color: #000;">
+          <!-- <a target="_blank" href="https://velero.io/" style="text-decoration: none;color: #000;"> -->
             <div class="card-block">
               <div>
                 <p>
-                  <img src="https://vmware.github.io/images/velero.png" alt="velero"
-                    style="    width: 120px;text-align: center;" />
+                  <img src="{{int.logo}}" alt="velero" style="width: 120px;text-align: center;" />
                 </p>
               </div>
               <div class="card-text">
-                <h4 style="font-size: 25px; font-weight: 300; line-height: 24px;     margin: 25px 0px 25px 0px;">Velero
+                <h4 style="font-size: 25px; font-weight: 300; line-height: 24px; margin: 25px 0px 25px 0px;">
+                  {{int.name}}
                 </h4>
-                <p style="line-height: 24px;
-                margin-top: 24px;
-                margin-bottom: 0;">
-                  Backup and migrate Kubernetes applications and persistent volume.
+                <p style="line-height: 24px;margin-top: 24px;margin-bottom: 0;">
+                  {{int.description}}
                 </p>
               </div>
             </div>
-          </a>
+          <!-- </a> -->
         </div>
       </div>
     </ng-container>
