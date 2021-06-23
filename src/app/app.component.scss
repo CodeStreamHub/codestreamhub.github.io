@@ -101,13 +101,15 @@ body {
 /* Float four columns side by side */
 .cs-column {
   float: left;
-  width: 25% !important;
+  width: 30% !important;
   padding: 0 10px;
 }
 
 .cs-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px 250px 0px 250px;
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -146,7 +148,18 @@ body {
   color: #000;
   text-decoration: none;
   height: 450px;
-  width: 280px;
+  width: 350px;
+}
+
+.cs-card:hover {
+  box-shadow: 0 3px 0 0 #0094d2;
+  border: 1px solid #0094d2;
+  text-decoration: none;
+  -webkit-transform: translate3d(0,-2px,0);
+  transform: translate3d(0,-2px,0);
+  transition: border .2s ease,-webkit-transform .2s ease;
+  transition: border .2s ease,transform .2s ease;
+  transition: border .2s ease,transform .2s ease,-webkit-transform .2s ease;
 }
 
 .cs-header {
@@ -209,4 +222,10 @@ h5 {
   color: white;
   padding: 0 1rem 1rem;
   margin: 0;
+}
+
+.anchor-style {
+  color: #529abc;
+  text-decoration: none;
+  margin-right: 25px;
 }

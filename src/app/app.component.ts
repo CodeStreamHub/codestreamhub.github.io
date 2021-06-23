@@ -9,6 +9,7 @@ import { AppService } from './app.service';
 })
 export class AppComponent implements OnInit {
   public integration: any;
+  public integrationId: string = "<integration id>";
 
   constructor(private appService: AppService) { }
 
